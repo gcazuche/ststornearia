@@ -526,3 +526,126 @@ textarea.form-input {
     background: var(--accent-glow); 
     transform: translateY(-5px); 
 }
+@media (max-width: 425px) {
+    h1, h2, h3 {
+        letter-spacing: 1px; 
+    }
+    .hero h1 {
+        font-size: 3.5rem; 
+    }
+    h2 {
+        font-size: 2.8rem; 
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    main {
+        padding-top: 150px; 
+    }
+    .main-nav {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; 
+
+    .main-nav a {
+        margin: 0 10px; 
+        font-size: 0.9rem;
+    }
+    #stats-section .stats-container {
+        flex-direction: column;
+        gap: 40px; 
+    }
+    .two-column-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+    #contato-page .two-column-layout .text-column {
+      order: 1;
+    }
+    #contato-page .two-column-layout .image-column {
+      order: 2;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        margin: 3px;
+    }
+    #back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+    #particles-js {
+        display: none;
+    }
+}
+}
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001; 
+}
+@media (max-width: 425px) {
+    .hamburger {
+        display: block;
+    }
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%; 
+        max-width: 320px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; 
+        background-color: var(--mid-blue);
+        border-left: 1px solid var(--light-blue);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        transform: translateX(100%); 
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+    }
+    .main-nav.nav-open {
+        transform: translateX(0);
+    }
+    .main-nav a {
+        margin-left: 0;
+        font-size: 1.5rem; 
+        opacity: 0; 
+        transition: opacity 0.3s ease-in-out;
+    }
+    .main-nav.nav-open a {
+        opacity: 1;
+        transition-delay: 0.3s; 
+    }
+    main { 
+        padding-top: 100px; 
+    } 
+    h1 { 
+        font-size: 3.5rem; 
+    }
+    h2 { 
+        font-size: 2.8rem; 
+    }
+    #stats-section .stats-container,
+    .two-column-layout {
+        flex-direction: column;
+    }
+}
+.no-scroll {
+    overflow: hidden;
+}
